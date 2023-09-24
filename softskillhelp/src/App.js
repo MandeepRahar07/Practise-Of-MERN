@@ -1,0 +1,20 @@
+
+import './App.css';
+import About from './components/About';
+import Navbar from './components/Navbar';
+
+import AllRoutes from './components/Routes/Routes';
+import Logi from './components/userdetails';
+
+function App() {
+  return (
+    <div className="App">
+      <Navbar></Navbar>
+      <AllRoutes></AllRoutes>
+     {/* <About></About> */}
+    
+    </div>
+  );
+}
+
+export default App;
