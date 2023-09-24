@@ -7,49 +7,44 @@ import { Box, Heading, Flex,Text , Image , Accordion,
 
 const Description =()=>{
     return (
-        <Box alignItems="center" justifyContent="center" height="100vh">
+        <Box alignItems="center" justifyContent="center" minHeight="100vh">
         <Flex direction={{ base: "column", md: "row" }}>
-{/* .........................................box for description and image............................................ */}
-            <Box  >
-                  {/* ........................................Description ..................................... */}
-                    <Box  p={6} width = "90%" height="60%" >
-                        <Heading mb={4} fontSize='4xl' textAlign='left' >
-                        How to install windows 10 ?
-                        </Heading>
-                        <Text fontSize='l' textAlign='left' >
-                        Installing Windows 10 on a computer typically involves several steps. Please note that the process may vary slightly depending on your specific computer's manufacturer and configuration. 
+          {/* Description and Image */}
+          <Box  width={{ base: "100%", md: "70%" }}>
+            {/* Description */}
+            <Box p={6}>
+              <Heading mb={4} fontSize="4xl" textAlign="left">
+                How to install Windows 10?
+              </Heading>
+              <Text fontSize="l" textAlign="left">
+              Installing Windows 10 on a computer typically involves several steps. Please note that the process may vary slightly depending on your specific computer's manufacturer and configuration. 
                          Backup Data: Ensure you have a backup of all your important data on an external storage device or cloud service, as the installation process may involve formatting your drive, which can result in data loss.
                          Windows 10 Installation Media: You will need a bootable Windows 10 installation USB drive or DVD. You can create one using the official Media Creation Tool from Microsoft's website. You'll also need a valid Windows 10 product key.
                          <br></br>
                         Create Windows 10 Installation Media
                         <br></br>Create Windows 10 Installation Media - Insert Installation Media - Boot from Installation Media - Windows Setup - Install Windows - Choose Installation Type - Installation Process - Create a User Account - Final Setup - Install Drivers and Software - Windows Update - Activation 
-                         
-                        </Text>
-
-                        <Heading mb={4} fontSize='4xl' textAlign='left' mt={10}>
-                        How to setup office 365 ?
-                        </Heading>
-                        <Text fontSize='l' textAlign='left' >
-                        Setting up Office 365 involves several steps, including creating an Office 365 account, configuring your domain, and installing Office applications. Here's a general guide on how to set up Office 365:
+              </Text>
+  
+              <Heading mb={4} fontSize="4xl" textAlign="left" mt={10}>
+                How to set up Office 365?
+              </Heading>
+              <Text fontSize="l" textAlign="left">
+              Setting up Office 365 involves several steps, including creating an Office 365 account, configuring your domain, and installing Office applications. Here's a general guide on how to set up Office 365:
                         <br></br>
                         Purchase an Office 365 Subscription - Sign Up for an Office 365 Account -  Add and Verify Your Domain - Configure DNS Records -  Set Up User Accounts - Install Office Applications - Configure Email - Migrate Data (if applicable) -  Configure Security Settings - Training and Support - Regular Maintenance
-                        </Text>
-                    </Box>
-
-            {/* ..........................................Image................................................ */}
-            <Box p={6}   width = "80%" height="500%" mt = {50}> 
-            <Image
-               src={require('./image/helo.png')}
+              </Text>
+            </Box>
+  
+            {/* Image */}
+            <Box p={6}>
+              <Image
+                src={require("./image/helo.png")}
                 alt="blog"
-                height="10%"
                 width="100%"
                 maxH="300px"
-            />
-
-
-             </Box>
-
-                </Box>
+              />
+            </Box>
+          </Box>
 {/* .........................................box for qus and ans............................................ */}
 <Box flex={{ base: "1" }} mt={{ base: 10, md: 0 }}>
               

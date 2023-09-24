@@ -14,10 +14,7 @@ function App() {
       <Navbar></Navbar>
       <AllRoutes></AllRoutes>
      {/* <About></About> */}
-     <Box mt="100%">
-     {/* <Logi></Logi> */}
-  
-     </Box>
+    
     </div>
   );
 }
