@@ -1,80 +1,105 @@
-import { Box, Heading, FormControl, Input, Button , Flex } from "@chakra-ui/react";
-// import axios from 'axios';
-import React, { useState } from 'react';
+import { Box, Heading, Flex, Text, Image, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Input, Textarea, Button, useToast } from "@chakra-ui/react";
+import { useState } from "react";
 
-const Logi = () => {
-
-  const [data, setData] = useState({
-    email: '',
-    phone: '',
+const Userconnect = () => {
+  const toast = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    phoneNumber: "",
+    email: "",
+    message: "",
   });
 
   const handleChange = (e) => {
-    setData({ ...data, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    try {
-    //   const response = await axios.post('http://localhost:8080/detail', data);
-    //   console.log(response);
-
-    //   // Update data if needed
-    //   setData({ ...data, email: '', phone: '' });
-
-    } catch (error) {
-      console.error('Error logging in:', error);
-    }
+    // You can add code here to handle the form submission, e.g., sending the data to a backend server
+    console.log("Form data submitted:", formData);
+  
+    // Reset the form fields by updating the state
+    setFormData({
+      name: "",
+      phoneNumber: "",
+      email: "",
+      message: "",
+    });
+  
+    toast({
+      title: "Form Submitted",
+      description: "Your message has been sent successfully.",
+      status: "success",
+      duration: 5000, // Display the toast for 5 seconds
+      isClosable: true,
+    });
   };
+  
 
   return (
-    <Box>
-      <Heading as="h1">Details to contact with us</Heading>
-      <form onSubmit={handleSubmit}>
-        <Flex >
-        <FormControl style={{ marginRight: '0' }}>
-          <Input
-            type="text"
-            width={{ base: '100%', md: '30rem' }}
-            height="4rem"
-            placeholder="Email "
-            sx={{ '::placeholder': { fontSize: 'xl' } }}
-            color="blue.500"
-            name="email"
-            value={data.email}
-            onChange={handleChange}
-          />
-        </FormControl>
+    <Box p={4}  >
+      <Flex direction={{ base: "column", md: "row" }}>
+        {/* .........................................box for description and image............................................ */}
+        <Box flex={{ base: "1", md: "2" }} mr={{ md: 20 }}>
+          {/* ........................................Description ..................................... */}
+          <Box p={4}>
+            {/* ... your existing content ... */}
 
-
-        <FormControl style={{ marginRight: '0' }}>
-          <Input
-            type="Phone no"
-            width={{ base: '100%', md: '30rem' }}
-            height="4rem"
-            placeholder="Contact no."
-            sx={{ '::placeholder': { fontSize: 'xl' } }}
-            color="blue.500"
-            name="password"
-            value={data.phone}
-            onChange={handleChange}
-          />
-        </FormControl>
-
-        </Flex>
-
-
-        <Button type="submit" colorScheme="blue" mt={4}>
-          Submit
-        </Button>
-
-
-
-
-      </form>
+            <Heading mb={4} fontSize={{ base: "2xl", md: "4xl" }} textAlign="left" mt={10}>
+              Contact Us
+            </Heading>
+            <form onSubmit={handleSubmit}>
+              <Input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                mb={2}
+                required
+              />
+              <Input
+                type="tel"
+                name="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+                placeholder="Phone Number"
+                mb={2}
+                required
+              />
+              <Input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+                mb={2}
+                required
+              />
+              <Textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Write a message..."
+                size="sm"
+                mb={4}
+                required
+              />
+              <Button type="submit" colorScheme="teal">
+                Submit
+              </Button>
+            </form>
+          </Box>
+        </Box>
+       
+      </Flex>
     </Box>
   );
 };
 
-export default Logi;
+export default Userconnect;

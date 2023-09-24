@@ -26,6 +26,10 @@ function Navbar() {
           <Routerlink to="/about" color="white" mr={4}>
             About
           </Routerlink>
+          
+          <Routerlink to="/contact" color="white" mr={4}>
+            Contact
+          </Routerlink>
         </Flex>
       </Box>
     );

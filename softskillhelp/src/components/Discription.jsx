@@ -7,12 +7,12 @@ import { Box, Heading, Flex,Text , Image , Accordion,
 
 const Description =()=>{
     return (
-        <Box mr={20} ml={20} mt={20}>
-            <Flex>
+        <Box alignItems="center" justifyContent="center" height="100vh">
+        <Flex direction={{ base: "column", md: "row" }}>
 {/* .........................................box for description and image............................................ */}
             <Box  >
                   {/* ........................................Description ..................................... */}
-                    <Box  p={6} width = "80%" height="60%" >
+                    <Box  p={6} width = "90%" height="60%" >
                         <Heading mb={4} fontSize='4xl' textAlign='left' >
                         How to install windows 10 ?
                         </Heading>
@@ -51,7 +51,7 @@ const Description =()=>{
 
                 </Box>
 {/* .........................................box for qus and ans............................................ */}
-<Box  width = "200%" height="60%" mt={20} >
+<Box flex={{ base: "1" }} mt={{ base: 10, md: 0 }}>
               
               <Accordion defaultIndex={[0]} allowMultiple>
 
@@ -77,7 +77,7 @@ const Description =()=>{
                      </h2>
                      <AccordionPanel pb={4}>
                      <Box as="span" flex='1' textAlign='left'>
-                         <h2 style={{ fontSize: '1.1rem' }}>Windows 10 is an operating system developed by Microsoft. 
+                         <h2 style={{ fontSize: '1rem' }}>Windows 10 is an operating system developed by Microsoft. 
                          It is the successor to Windows 8.1 and was first released in July 2015. Windows 10 is designed to provide a familiar and user-friendly experience while offering new features and improvements over its predecessors.
                          </h2>
                          </Box>
