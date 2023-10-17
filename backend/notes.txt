@@ -1,0 +1,32 @@
+import { sign } from "jsonwebtoken"
+Middleware(req, res , next)
+authentication = google, github, JsonWebTokenError , bcrypt, 
+authorization 
+multer 
+log 
+signup
+
+payment gateways,
+Serverless Functions: Deploy Node.js functions in serverless environments, like AWS Lambda or Azure Functions, to create highly scalable, event-driven applications.
+
+opt functionality ya email , password reset links
+ CRUD 
+ search filter sort pagination
+ 3-4 type filter
+
+Real-Time Applications: Node.js is ideal for building real-time applications like chat applications, online gaming, and collaborative tools. Libraries like Socket.io can help with real-time communication.
+File System Operations: You can interact with the file system to read and write files, manage directories, and upload/download files.
+
+
+
+Task Scheduling: Use packages like node-cron or Agenda to schedule and automate tasks or jobs at specific intervals.
+Logging and Debugging: Implement logging and debugging functionality to monitor and troubleshoot your application effectively. Libraries like Winston can be helpful.
+
+Security: Enhance the security of your application by implementing measures such as input validation, cross-site scripting (XSS) prevention, and protection against common web vulnerabilities. handle input is email 
+WebSocket Support: Implement WebSocket support for bidirectional communication, ideal for real-time applications.
+
+Caching: Use caching mechanisms like Redis to improve the performance of your application by reducing database load.
+
+Integration with External Services: Integrate with third-party services, like payment gateways, social media APIs, and geolocation services.
+
+Load Balancing and Scalability: Node.js can be used in combination with load balancers to handle high traffic and ensure the scalability of your application.
