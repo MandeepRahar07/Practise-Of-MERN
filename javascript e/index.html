@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    helo
+</body>
+</html>
+<script>
+// ................clouser example................ 
+    function add(num){
+        function sum(num2){
+            console.log(num+num2);
+        }
+        return sum;
+    }
+    const add2 = add(5);
+    add2(4);
+
+// ..................higher order function example............ 
+    function square(n){
+  return n*n;
+    }
+
+    function abc(fn){
+        return  console.log(fn(4));
+    }
+
+    abc(square);
+    
+
+const numbers = [1, 2, 3, 4, 5];
+
+function square(x) {
+    return console.log( x * x);
+}
+
+const squaredNumbers = numbers.map(square);
+
+
+// ................call aaply and bind.............. 
+  function a(age){
+    return console.log(this.name + " is " + age);
+
+
+  }
+
+  const z = {
+    name : "mandeep"
+  }
+
+  a.call(z,24);
+  a.apply(z,[24]);
+
+
+  const bindfn = a.bind(z);
+  console.log(bindfn)
+
+  bindfn(5)
+// .................snipet............... 
+// 1) 
+  function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+const originalString = "Hello, World!";
+const reversedString = reverseString(originalString);
+console.log(reversedString);
+
+
+// the maximum number in an array:
+
+
+function findMax(arr) {
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+const number = [12, 34, 6, 45, 78, 23];
+const maxNumber = findMax(number);
+console.log(maxNumber);
+
+//a string is a palindrome:
+function isPalindrome(str) {
+    str = str.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
+    const reversedStr = str.split('').reverse().join('');
+    return str === reversedStr;
+}
+
+
+const testString = "A man, a plan, a canal, Panama";
+const isPalindromic = isPalindrome(testString);
+console.log(isPalindromic);
+
+
+// asynchronous operations using Promises:
+
+// function delay(seconds) {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             resolve(`Resolved after ${seconds} seconds`);
+//         }, seconds * 1000);
+//     });
+// }
+
+// delay(3)
+//     .then(result => {
+//         console.log(result);
+//         return delay(2);
+//     })
+//     .then(result => {
+//         console.log(result);
+//         return delay(1);
+//     })
+//     .then(result => {
+//         console.log(result);
+//     });
+
+// 3
+(function(){
+  var a = b = 3;
+})();
+
+console.log("a defined? " + (typeof a !== 'undefined'));
+console.log("b defined? " + (typeof b !== 'undefined'));
+
+function foo1()
+{
+  return {
+      bar: "hello"
+  }
+}
+
+function foo2()
+{
+  return
+   {
+      bar: "hello"
+  }
+}
+
+
+console.log("foo1 returns:");
+console.log(foo1());
+console.log("foo2 returns:");
+console.log(foo2());
+
+
+(function() {
+    console.log(1); 
+    setTimeout(function(){console.log(2)}, 1000); 
+    setTimeout(function(){console.log(3)}, 0); 
+    console.log(4);
+})();
+
+for (var i = 0; i < 5; i++) {
+  var btn = document.createElement('button');
+  btn.appendChild(document.createTextNode('Button ' + i));
+  btn.addEventListener('click', function(){ console.log(i); });
+  document.body.appendChild(btn);
+}
+for (var i = 0; i < 5; i++) {
+  var btn = document.createElement('button');
+  btn.appendChild(document.createTextNode('Button ' + i));
+  btn.addEventListener('click', (function(i) {
+    return function() { console.log(i); };
+  })(i));
+  document.body.appendChild(btn);
+}
+
+// ..........................
+// memoization
+function sumToN(n, memo = {}) {
+  if (n in memo) {
+    return memo[n];
+  }
+
+  if (n === 1) {
+    return 1;
+  }
+
+  memo[n] = n + sumToN(n - 1, memo);
+  return memo[n];
+}
+console.time();
+console.log(sumToN(5));
+console.timeEnd(); 
+
+console.time();// Output: 15 (1 + 2 + 3 + 4 + 5 = 15)
+console.log(sumToN(10));
+console.timeEnd();
+ // Output: 55 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55)
+
+</script>
