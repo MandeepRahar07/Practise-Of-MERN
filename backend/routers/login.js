@@ -1,13 +1,15 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
-const {UserModel} = require("./models/user.model");
-const routers =  express.Router();
+const {UserModel} = require("../models/user.model");
+const router =  express.Router();
 const jwt = require('jsonwebtoken');
 
-router.post('/', async(req,res)=>{
+
+
+router.post('/login', async(req,res)=>{
     const {email, password} = req.body;
     try{
-        const isuser = await UserModel.find({email : email});
+        const isuser = await UserModel.findOne({email : email});
         if(!isuser){
             res.send({ msg : "user not found, singup first"});
         }
@@ -25,6 +27,8 @@ router.post('/', async(req,res)=>{
         }
     }catch(err){
         res.send(err);
+        console.log("errr");
     }
-
 })
+
+module.exports = router;

@@ -1,0 +1,46 @@
+{
+  "transactions": [
+    {
+      "type": "Income",
+      "category": "Gifts",
+      "amount": "5000",
+      "date": "2023-06-30",
+      "id": 1
+    },
+    {
+      "type": "Expense",
+      "category": "Bills",
+      "amount": "6000",
+      "date": "2023-06-30",
+      "id": 2
+    },
+    {
+      "type": "Expense",
+      "category": "Salary",
+      "amount": "7000",
+      "date": "2023-06-30",
+      "id": 3
+    },
+    {
+      "type": "Income",
+      "category": "Other",
+      "amount": "2000",
+      "date": "2023-06-08",
+      "id": 4
+    },
+    {
+      "type": "Income",
+      "category": "Salary",
+      "amount": "",
+      "date": "",
+      "id": 5
+    },
+    {
+      "type": "Expense",
+      "category": "Salary",
+      "amount": "123",
+      "date": "2023-09-09",
+      "id": 6
+    }
+  ]
+}
