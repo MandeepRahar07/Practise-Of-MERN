@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.App {
+  width: calc((100% / 5) * 3);
+  margin: auto;
+}
+input:placeholder-shown {
+  font-style: italic;
+  font-size: 16px;
+  color: rgb(223, 203, 203);
+}
+input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+input[type="submit"] {
+  width: 100%;
+  padding: 10px 0;
+  background-color: lightblue;
+  font-size: 1rem;
+  color: white;
+  border-radius: 1rem 0 1rem;
+}
+label{
+  font-size: .8rem;
+  font-style:italic;
+  color:rgb(223, 203, 203);
+}
+p{
+  text-align: center;
+}
+.oauth{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.oauth>button{
+  width: 80%;
+  border: none;
+  background-color: rgb(144, 159, 144);
+  padding: 10px 0;
+  border-radius: 1rem 0 1rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.oauth>button>a{
+  color: white;
+  text-decoration: none;
+}
